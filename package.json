@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development --hot",
+    "dev": "webpack-dev-server --mode=development --hot --open",
     "build": "rm -rf dist && webpack --mode=production --progress",
     "reg": "node reg-util.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Popov Alexandr <mehanik-pyx@mail.ru> (https://github.com/mehanik-pyx)",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -42,9 +42,9 @@
     "terser-webpack-plugin": "^1.2.3",
     "vue-loader": "^15.6.4",
     "vue-template-compiler": "^2.6.7",
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.0"
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   },
   "browserslist": [
     "last 2 versions"
