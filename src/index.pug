@@ -65,16 +65,16 @@ html(lang="en")
 
 
       .values
-        .container
+        .container.values__container
           .values__title
             h2.section-title.values__title-text Чем я могу быть полезен вам
             .values__desc
               p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
-
-        ul.user-skills
-          .input
-            input(type="text").input__elem
-            .input__icon
+        .skills
+          ul.user-skills
+            .input
+              input(type="text").input__elem
+              .input__icon
 
           - 
             var skills = [
