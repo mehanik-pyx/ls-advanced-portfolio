@@ -12,10 +12,12 @@ html(lang="en")
       .welcome-section
         section.hero
           .container.hero__container
+
             header.header.hero__header
               .hero__logo
                 .logo АП
-              .hero__menu
+              .hero__menu 
+                //- этот див можно убрать
                 - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
                 nav.nav
                   ul.nav__list
@@ -52,7 +54,7 @@ html(lang="en")
                         td.user__table-content #{cell[1]}
 
             .about__right
-              h4.about__prolog Привет, меня зовут
+              .about__prolog Привет, меня зовут
               h2.about__title Попов Александр
               .about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
               .about__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
@@ -106,7 +108,7 @@ html(lang="en")
                     img.previews__pic
             .slider__buttons
               .slider-button
-                button.slider-buttons__item.slider-buttons__item--slide--prev 
+                button.slider-buttons__item.slider-buttons__item--slide--prev
                 button.slider-buttons__item.slider-buttons__item--slide--next
 
         .works__right
