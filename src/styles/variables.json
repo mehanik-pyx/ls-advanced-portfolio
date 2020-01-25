@@ -1,7 +1,11 @@
 {
   "text-color": "#414c63",
-  "text-color2": "#464d62",
+  "text-color-reserve": "#464d62",
+  "links-hover": "#5500f2",
   "links-color": "#4b6fd7",
+  "footer-bg": "#252830",
+  "footer-bg-gray-blue": "#1f232d",
+  "footer-text": "#fff",
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",

@@ -7,23 +7,21 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Portfolio | main page
+    //- как подключить фавикон? link(rel="shortcut icon" href="/images/icons/favicon.png" type="image/png")
   body
     .wrapper
       .welcome-section
         section.hero
           .container.hero__container
-
             header.header.hero__header
               .hero__logo
                 .logo АП
-              .hero__menu 
-                //- этот див можно убрать
+              nav.hero__menu 
                 - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-                nav.nav
-                  ul.nav__list
-                    each item in menu
-                      li.nav__item
-                        a(href="#" + item).nav__link #{item}
+                ul.nav__list
+                  each item in menu
+                    li.nav__item
+                      a(href="#" + item).nav__link #{item}
               .hero__links
                 - var icons = ['insta', 'vk', 'github']
                 ul.socials
@@ -40,30 +38,31 @@ html(lang="en")
               a(href="#about").scroll-down-btns Скролл  
                 +icon("scroll", 'scroll__icon') 
         section.about#about
-          .container.about__container
-            .about__left
-              .user
-                .avatar.user__avatar
-                  +image("content/user.jpg", "avatar__pic")
-                .user__text
-                  - var rows =[["Проживаю:", "Новосибирск"], ["Возраст:", "22 года"], ["Родился:", "8 августа"]];
-                  table.user__table
-                    each cell in rows
-                      tr.user__table-row
-                        td.user__table-title #{cell[0]}
-                        td.user__table-content #{cell[1]}
+          .container
+            .about__container
+              .about__info
+                .user
+                  .avatar.user__avatar
+                    +image("content/user.jpg", "avatar__pic")
+                  .user__text
+                    - var rows =[["Проживаю:", "Новосибирск"], ["Возраст:", "22 года"], ["Родился:", "8 августа"]];
+                    table.user__table
+                      each cell in rows
+                        tr.user__table-row
+                          td.user__table-title #{cell[0]}
+                          td.user__table-content #{cell[1]}
 
-            .about__right
-              .about__prolog Привет, меня зовут
-              h2.about__title Попов Александр
-              .about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-              .about__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
+              .about__description
+                .about__suptitle Привет, меня зовут
+                h2.about__title Попов Александр
+                .about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                .about__subtext Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
 
-      .triangles
-        svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
-          polygon(points="0,0 0,100 1000,100")
-        svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
-          polygon(points="0,100 1000,100 1000,0")
+        //- .separator когда разберусь с сепаратором нужно отредактировать svg:hover{fill}
+          svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,0 0,100 1000,100")
+          svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,100 1000,100 1000,0")
 
 
       .values
@@ -125,6 +124,4 @@ html(lang="en")
               .iconed-link__icon
               .iconed-link__text
 
-
-
-            
+      footer
