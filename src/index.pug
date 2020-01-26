@@ -10,118 +10,117 @@ html(lang="en")
     //- как подключить фавикон? link(rel="shortcut icon" href="/images/icons/favicon.png" type="image/png")
   body
     .wrapper
-      .welcome-section
-        section.hero
-          .container.hero__container
-            header.header.hero__header
-              .hero__logo
-                .logo АП
-              nav.hero__menu 
-                - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-                ul.nav__list
-                  each item in menu
-                    li.nav__item
-                      a(href="#" + item).nav__link #{item}
-              .hero__links
-                - var icons = ['insta', 'vk', 'github']
-                ul.socials
-                  each item in icons
-                    li.socials__item
-                      a(href="https://" + item + ".com/").socials__link
-                        +icon(item, 'socials__icon')
+      .maincontent
+        .welcome-section
+          section.hero
+            .container.hero__container
+              header.header.hero__header
+                .hero__logo
+                  a(href="https://mehanik-pyx.github.io/ls-advanced-portfolio/").logo АП
+                nav.hero__menu 
+                  - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+                  ul.nav__list
+                    each item in menu
+                      li.nav__item
+                        a(href="#" + item).nav__link #{item}
+                .hero__links
+                  - var icons = ['insta', 'vk', 'github']
+                  ul.socials
+                    each item in icons
+                      li.socials__item
+                        a(href="https://" + item + ".com/").socials__link
+                          +icon(item, 'socials__icon')
 
-            .hero__content
-              .user-info
-                .user-info__desc Личный сайт <br> веб разработчика
-                h1.user-info__username Александр <br> Попов
-            .hero__btns
-              a(href="#about").scroll-down-btns Скролл  
-                +icon("scroll", 'scroll__icon') 
-        section.about#about
-          .container
-            .about__container
-              .about__info
-                .user
-                  .avatar.user__avatar
-                    +image("content/user.jpg", "avatar__pic")
-                  .user__text
-                    - var rows =[["Проживаю:", "Новосибирск"], ["Возраст:", "22 года"], ["Родился:", "8 августа"]];
-                    table.user__table
-                      each cell in rows
-                        tr.user__table-row
-                          td.user__table-title #{cell[0]}
-                          td.user__table-content #{cell[1]}
+              .hero__content
+                .user-info
+                  .user-info__desc Личный сайт <br> веб разработчика
+                  h1.user-info__username Александр <br> Попов
+              .hero__btns
+                a(href="#about").scroll-down-btns Скролл  
+                  +icon("scroll", 'scroll__icon') 
+          section.about#about
+            .container
+              .about__container
+                .about__info
+                  .user
+                    .avatar.user__avatar
+                      +image("content/user.jpg", "avatar__pic")
+                    .user__text
+                      - var rows =[["Проживаю:", "Новосибирск"], ["Возраст:", "22 года"], ["Родился:", "8 августа"]];
+                      table.user__table
+                        each cell in rows
+                          tr.user__table-row
+                            td.user__table-title #{cell[0]}
+                            td.user__table-content #{cell[1]}
 
-              .about__description
-                .about__suptitle Привет, меня зовут
-                h2.about__title Попов Александр
-                .about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                .about__subtext Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
+                .about__description
+                  .about__suptitle Привет, меня зовут
+                  h2.about__title Попов Александр
+                  .about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                  .about__subtext Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
 
-        //- .separator когда разберусь с сепаратором нужно отредактировать svg:hover{fill}
-          svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
-            polygon(points="0,0 0,100 1000,100")
-          svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
-            polygon(points="0,100 1000,100 1000,0")
+          //- .separator когда разберусь с сепаратором нужно отредактировать svg:hover{fill}
+            svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+              polygon(points="0,0 0,100 1000,100")
+            svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+              polygon(points="0,100 1000,100 1000,0")
 
+        .values
+          .container.values__container
+            .values__title
+              h2.section-title.values__title-text Чем я могу быть полезен вам
+              .values__desc
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
+          .skills
+            ul.user-skills
+              .input
+                input(type="text").input__elem
+                .input__icon
 
-      .values
-        .container.values__container
-          .values__title
-            h2.section-title.values__title-text Чем я могу быть полезен вам
-            .values__desc
-              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
-        .skills
-          ul.user-skills
-            .input
-              input(type="text").input__elem
-              .input__icon
+            - 
+              var skills = [
+                ['frontend', ['html', 'css', 'js']],
+                ['workflow', ['git', 'terminal', 'gulp']],
+              ]
+            each item in skills 
+              li.user-skills__item.skills-row 
+                h3.skills-row__title #{item[0]}
+                ul.skills-row__list
+                  each skill in item[1]
+                    li.skills-row__item
+                      .skill
+                        svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__shape
+                          circle(r="80" cx="100" cy="100").skill__circle.skill__circle--position--under
+                          //- circle(r="80" cx="100" cy="100").skill__circle.skill__circle--position--above
+                          linear-gradient()
+                        .skill__title #{skill}
+                      
+        .works
+          h2.section-title Мои работы
+          .works__left
+            .slider
+              img().slider__fillpic
+              .slider__preview
+                ul.previews
+                  - for (var i = 0; i < 3; i++)
+                    li.previews__item
+                      img.previews__pic
+              .slider__buttons
+                .slider-button
+                  button.slider-buttons__item.slider-buttons__item--slide--prev
+                  button.slider-buttons__item.slider-buttons__item--slide--next
 
-          - 
-            var skills = [
-              ['frontend', ['html', 'css', 'js']],
-              ['workflow', ['git', 'terminal', 'gulp']],
-            ]
-          each item in skills 
-            li.user-skills__item.skills-row 
-              h3.skills-row__title #{item[0]}
-              ul.skills-row__list
-                each skill in item[1]
-                  li.skills-row__item
-                    .skill
-                      svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__shape
-                        circle(r="80" cx="100" cy="100").skill__circle.skill__circle--position--under
-                        //- circle(r="80" cx="100" cy="100").skill__circle.skill__circle--position--above
-                        linear-gradient()
-                      .skill__title #{skill}
-                    
-      .works
-        h2.section-title Мои работы
-        .works__left
-          .slider
-            img().slider__fillpic
-            .slider__preview
-              ul.previews
-                - for (var i = 0; i < 3; i++)
-                  li.previews__item
-                    img.previews__pic
-            .slider__buttons
-              .slider-button
-                button.slider-buttons__item.slider-buttons__item--slide--prev
-                button.slider-buttons__item.slider-buttons__item--slide--next
-
-        .works__right
-          .works__tags
-            - var tags = ['html', 'css', 'javascript']
-            each tag in tags
-              ul.tags
-                li.tags__item #{tag}
-          .works__text
-            h3.works__title Сайт школы
-            .works__desc-text
-              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam dolorum nulla placeat cumque nostrum commodi ad numquam dolores distinctio officiis molestiae, assumenda omnis ut voluptas itaque eligendi mollitia earum. Tenetur.
-            a.iconed-link
-              .iconed-link__icon
-              .iconed-link__text
-
-      footer
+          .works__right
+            .works__tags
+              - var tags = ['html', 'css', 'javascript']
+              each tag in tags
+                ul.tags
+                  li.tags__item #{tag}
+            .works__text
+              h3.works__title Сайт школы
+              .works__desc-text
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam dolorum nulla placeat cumque nostrum commodi ad numquam dolores distinctio officiis molestiae, assumenda omnis ut voluptas itaque eligendi mollitia earum. Tenetur.
+              a.iconed-link
+                .iconed-link__icon
+                .iconed-link__text
+      include ./templates/footer.pug
