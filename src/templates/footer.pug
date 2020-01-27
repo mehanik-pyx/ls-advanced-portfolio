@@ -6,3 +6,10 @@ footer.footer
 			.footer__copyright-name Владимир Астахов
 			.footer__copyright-desc Личный сайт веб-разработчика
 		.footer__data
+			nav.nav.nav--white.footer__nav
+				ul.nav__list
+					- var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+					each item in menu
+						li.nav__item
+							a(href="#").nav__link #{item}
+			.footer__content
