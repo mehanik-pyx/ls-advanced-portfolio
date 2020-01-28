@@ -24,10 +24,10 @@ html(lang="en")
                       li.nav__item
                         a(href="#").nav__link #{item}
                         //- a(href="#" + item).nav__link #{item}
-                .hero__links
-                  - var icons = ['insta', 'vk', 'github']
+                .hero__socials
+                  - var socials = ['insta', 'vk', 'github']
                   ul.socials
-                    each item in icons
+                    each item in socials
                       li.socials__item
                         a(href="https://" + item + ".com/").socials__link
                           +icon(item, 'socials__icon')
