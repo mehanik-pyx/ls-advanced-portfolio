@@ -1,10 +1,22 @@
 .values{
+	/*position: relative;*/
 	padding-top: 145px;
 }
 
 .values__container {
 	display: flex;
   justify-content: center;
+  /*&:before {
+  	content: "";
+    position: absolute;
+    background: url('~images/content/backpack.png') left bottom / contain no-repeat;
+    display: block;
+    width: 712px;
+		height: 627px;
+		z-index: -1000;
+		top: 77px;
+		right: 559px;
+  }*/
 }
 
 .values__title {
@@ -16,10 +28,23 @@
 	font-weight: 700;
 	line-height: 36px;
 	margin-bottom: 51px;
+	position: relative;
+	/*&:before {
+  	content: "";
+    position: absolute;
+    background: url('~images/content/backpack.png') left bottom / contain no-repeat;
+    display: block;
+    width: 712px;
+		height: 627px;
+		z-index: -1000;
+		top: 77px;
+		right: 559px;
+  }*/
 }
 
 .values__desc{
 	line-height: 30px;
 	opacity: 0.5;
-  max-width: 585px;
+  max-width: 590px;
+  font-weight: 600;
 }

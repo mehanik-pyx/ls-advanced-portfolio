@@ -26,12 +26,14 @@
 	line-height: 30px;
 	font-weight: 600;
 }
+
 .about__title {
 	margin-bottom: 28px;
 	font-size: 36px;
 	line-height: 48px;
 	font-weight: 700;
 }
+
 .about__text {
 	opacity: 0.5;
 	margin-bottom: 92px;
@@ -39,10 +41,23 @@
 	line-height: 30px;
 	font-weight: 600;
 }
+
 .about__subtext {
 	opacity: 0.5;
 	font-size: 16px;
 	line-height: 30px;
 	font-weight: 400;
 	font-style: italic;
+	position: relative;
+	&:before {
+		position: absolute;
+		top: 11px;
+		margin-right: 31px;
+		margin-left: -57px;
+		content:'*';
+		font-style: italic;
+		color: #db0200;
+		opacity: .1;
+		font-size: 48px;
+	}
 }
