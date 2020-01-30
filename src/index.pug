@@ -66,60 +66,74 @@ html(lang="en")
             svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
               polygon(points="0,100 1000,100 1000,0")
         .middle-section
-          .values
+          section.values
             .container.values__container
               .values__title
                 h2.section-title.values__title-text Чем я могу быть полезен вам
                 .values__desc
                   p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
-            .skills
-              ul.user-skills
-                - 
-                  var skills = [
-                    ['Frontend', ['HTML5', 'CSS3', 'Javascript', 'Jquery и Vue.js']],
-                    ['Workflow', ['GIT', 'Terminal', 'Gulp', 'Webpack']],
-                  ]
-                each row in skills
-                  li.user-skills__item.skills-row
-                    h3.skills-row__title #{row[0]}
-                    ul.skills-row__list
-                      each skill in row[1]
-                        li.skills-row__item
-                          .skill
-                            svg(viewBox="0 0 48 48" preserveAspectRatio="none").skill__shape
-                              circle(r="15.91549430918954" cx="24" cy="24").skill__circle.skill__circle--under
-                              circle(r="15.91549430918954" cx="24" cy="24" stroke="url(#gradient)" transform='rotate(180 24 24)').skill__circle.skill__circle--above
-                              linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                                stop(offset="0%" stop-color="#5500f2")
-                                stop(offset="100%" stop-color="#8f00ef")
-                            .skill__title #{skill}
+            .container.skills__container
+              .skills
+                ul.user-skills
+                  - 
+                    var skills = [
+                      ['Frontend', ['HTML5', 'CSS3', 'Javascript', 'Jquery и Vue.js']],
+                      ['Workflow', ['GIT', 'Terminal', 'Gulp', 'Webpack']],
+                    ]
+                  each row in skills
+                    li.user-skills__item.skills-row
+                      h3.skills-row__title #{row[0]}
+                      ul.skills-row__list
+                        each skill in row[1]
+                          li.skills-row__item
+                            .skill
+                              svg(viewBox="0 0 48 48" preserveAspectRatio="none").skill__shape
+                                circle(r="15.91549430918954" cx="24" cy="24").skill__circle.skill__circle--under
+                                circle(r="15.91549430918954" cx="24" cy="24" stroke="url(#gradient)" transform='rotate(180 24 24)').skill__circle.skill__circle--above
+                                linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                                  stop(offset="0%" stop-color="#5500f2")
+                                  stop(offset="100%" stop-color="#8f00ef")
+                              .skill__title #{skill}
                         
-          .works
-            h2.section-title Мои работы
-            .works__left
-              .slider
-                img().slider__fillpic
-                .slider__preview
-                  ul.previews
-                    - for (var i = 0; i < 3; i++)
-                      li.previews__item
-                        img.previews__pic
-                .slider__buttons
-                  .slider-button
-                    button.slider-buttons__item.slider-buttons__item--slide--prev
-                    button.slider-buttons__item.slider-buttons__item--slide--next
+          section.works
+            .container.work__container
+              h2.section-title Мои работы
+              .works__slider-sections
+                .slider
+                  .slider__pictures-section
+                    +image('content/1.jpg', 'slider__fillpic')
+                    .slider__buttons
+                      .slider-button
+                        button.slider-buttons__item.slider-buttons__item--slide--next
+                          +icon('arrow', 'arrow arrow--next')
+                        button.slider-buttons__item.slider-buttons__item--slide--prev
+                          +icon('arrow', 'arrow arrow--prev')
+                    .slider__previews
+                      ul.previews
+                        - for (var i = 2; i < 6; i++)
+                          li.previews__item
+                            +image("content/" + i + ".jpg" , "previews__pic")
 
-            .works__right
-              .works__tags
-                - var tags = ['html', 'css', 'javascript']
-                each tag in tags
-                  ul.tags
-                    li.tags__item #{tag}
-              .works__text
-                h3.works__title Сайт школы
-                .works__desc-text
-                  p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam dolorum nulla placeat cumque nostrum commodi ad numquam dolores distinctio officiis molestiae, assumenda omnis ut voluptas itaque eligendi mollitia earum. Tenetur.
-                a.iconed-link
-                  .iconed-link__icon
-                  .iconed-link__text
+                  .slider__text-section
+                    .slide__tags
+                      ul.tags__list
+                        - var tags = ['HTML', 'CSS', 'Javascript']
+                        each tag in tags
+                          li.tags__item #{tag}
+                    .slide__text
+                      h3.slide__title Сайт школы образования
+                      .slide__desc-text
+                        p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                      a.iconed-link
+                        +icon('link', 'iconed-link__icon')
+                        .iconed-link__text Посмотреть сайт
+        .budda-section
+          section.reviews
+            .container.container__reviews
+          section.contacts
+            .container.container__contacts
+              .form
+                .section-title Связаться со мной
+                form.form__elem
+
       include ./templates/footer.pug
