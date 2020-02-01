@@ -12,53 +12,8 @@ html(lang="en")
     .wrapper
       .maincontent
         .welcome-section
-          section.hero
-            .container.hero__container
-              header.header.hero__header
-                .hero__logo
-                  a(href="https://mehanik-pyx.github.io/ls-advanced-portfolio/").logo АП
-                nav.nav
-                  - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-                  ul.nav__list
-                    each item in menu
-                      li.nav__item
-                        a(href="#").nav__link #{item}
-                        //- a(href="#" + item).nav__link #{item}
-                .hero__socials
-                  - var socials = ['instagram', 'vk', 'github']
-                  ul.socials
-                    each item in socials
-                      li.socials__item
-                        a(href="https://" + item + ".com/").socials__link
-                          +icon(item, 'socials__icon')
-
-              .hero__content
-                .user-info
-                  .user-info__desc Личный сайт <br> веб разработчика
-                  h1.user-info__username Александр <br> Попов
-              .hero__btns
-                a(href="#about").scroll-down-btns Скролл  
-                  +icon("scroll", 'scroll__icon') 
-          section.about#about
-            .container
-              .about__container
-                .about__info
-                  .user
-                    .avatar.user__avatar
-                      +image("content/user.jpg", "avatar__pic")
-                    .user__text
-                      - var rows =[["Проживаю:", "Новосибирск"], ["Возраст:", "22 года"], ["Родился:", "8 августа"]];
-                      table.user__table
-                        each cell in rows
-                          tr.user__table-row
-                            td.user__table-title #{cell[0]}
-                            td.user__table-content #{cell[1]}
-
-                .about__description
-                  .about__suptitle Привет, меня зовут
-                  h2.about__title Попов Александр
-                  .about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                  .about__subtext Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
+          include ./templates/hero.pug
+          include ./templates/about.pug
 
           //- .separator когда разберусь с сепаратором нужно отредактировать svg:hover{fill}
             svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
@@ -66,67 +21,9 @@ html(lang="en")
             svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
               polygon(points="0,100 1000,100 1000,0")
         .middle-section
-          section.values
-            .container.values__container
-              .values__title
-                h2.section-title.values__title-text Чем я могу быть полезен вам
-                .values__desc
-                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
-            .container.skills__container
-              .skills
-                ul.user-skills
-                  - 
-                    var skills = [
-                      ['Frontend', ['HTML5', 'CSS3', 'Javascript', 'Jquery и Vue.js']],
-                      ['Workflow', ['GIT', 'Terminal', 'Gulp', 'Webpack']],
-                    ]
-                  each row in skills
-                    li.user-skills__item.skills-row
-                      h3.skills-row__title #{row[0]}
-                      ul.skills-row__list
-                        each skill in row[1]
-                          li.skills-row__item
-                            .skill
-                              svg(viewBox="0 0 48 48" preserveAspectRatio="none").skill__shape
-                                circle(r="15.91549430918954" cx="24" cy="24").skill__circle.skill__circle--under
-                                circle(r="15.91549430918954" cx="24" cy="24" stroke="url(#gradient)" transform='rotate(180 24 24)').skill__circle.skill__circle--above
-                                linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                                  stop(offset="0%" stop-color="#5500f2")
-                                  stop(offset="100%" stop-color="#8f00ef")
-                              .skill__title #{skill}
+          include ./templates/values.pug
                         
-          section.works
-            .container.work__container
-              h2.section-title Мои работы
-              .works__slider-sections
-                .slider
-                  .slider__pictures-section
-                    +image('content/1.jpg', 'slider__fillpic')
-                    .slider__buttons
-                      .slider-button
-                        button.slider-buttons__item.slider-buttons__item--slide--next
-                          +icon('arrow', 'arrow arrow--next')
-                        button.slider-buttons__item.slider-buttons__item--slide--prev
-                          +icon('arrow', 'arrow arrow--prev')
-                    .slider__previews
-                      ul.previews
-                        - for (var i = 2; i < 6; i++)
-                          li.previews__item
-                            +image("content/" + i + ".jpg" , "previews__pic")
-
-                  .slider__text-section
-                    .slide__tags
-                      ul.tags__list
-                        - var tags = ['HTML', 'CSS', 'Javascript']
-                        each tag in tags
-                          li.tags__item #{tag}
-                    .slide__text
-                      h3.slide__title Сайт школы образования
-                      .slide__desc-text
-                        p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                      a.iconed-link
-                        +icon('link', 'iconed-link__icon')
-                        .iconed-link__text Посмотреть сайт
+          include ./templates/works.pug
         .budda-section
           section.reviews
             .container.container__reviews

@@ -1,0 +1,27 @@
+section.hero
+  .container.hero__container
+    header.header.hero__header
+      .hero__logo
+        a(href="https://mehanik-pyx.github.io/ls-advanced-portfolio/").logo АП
+      nav.nav
+        - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+        ul.nav__list
+          each item in menu
+            li.nav__item
+              a(href="#").nav__link #{item}
+              //- a(href="#" + item).nav__link #{item}
+      .hero__socials
+        - var socials = ['instagram', 'vk', 'github']
+        ul.socials
+          each item in socials
+            li.socials__item
+              a(href="https://" + item + ".com/").socials__link
+                +icon(item, 'socials__icon')
+
+    .hero__content
+      .user-info
+        .user-info__desc Личный сайт <br> веб разработчика
+        h1.user-info__username Александр <br> Попов
+    .hero__btns
+      a(href="#about").scroll-down-btns Скролл
+        +icon("scroll", 'scroll__icon')

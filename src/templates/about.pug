@@ -1,0 +1,20 @@
+section.about#about
+  .container
+    .about__container
+      .about__info
+        .user
+          .avatar.user__avatar
+            +image("content/user.jpg", "avatar__pic")
+          .user__text
+            - var rows =[["Проживаю:", "Новосибирск"], ["Возраст:", "22 года"], ["Родился:", "8 августа"]];
+            table.user__table
+              each cell in rows
+                tr.user__table-row
+                  td.user__table-title #{cell[0]}
+                  td.user__table-content #{cell[1]}
+
+      .about__description
+        .about__suptitle Привет, меня зовут
+        h2.about__title Попов Александр
+        .about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+        .about__subtext Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут все классно и красиво!
