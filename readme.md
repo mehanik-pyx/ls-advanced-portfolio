@@ -1,6 +1,6 @@
 Попов Александр Евгеньевич курс Продвинутый веб 14.01.20-20.02.20
 
-Пройдите по ссылке https://mehanik-pyx.github.io/ls-advanced-portfolio/dist/ чтобы открыть актуальную версию проекта
+Пройдите по [ссылке] (https://mehanik-pyx.github.io/ls-advanced-portfolio/dist/) чтобы открыть актуальную версию проекта
 
 # Учебный шаблон проекта Portfolio
 
