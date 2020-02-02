@@ -15,22 +15,13 @@ html(lang="en")
           include ./templates/hero.pug
           include ./templates/about.pug
 
-          //- .separator когда разберусь с сепаратором нужно отредактировать svg:hover{fill}
-            svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
-              polygon(points="0,0 0,100 1000,100")
-            svg.separator__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
-              polygon(points="0,100 1000,100 1000,0")
         .middle-section
           include ./templates/values.pug
                         
-          include ./templates/works.pug
+          include ./templates/slider-works.pug
         .budda-section
-          section.reviews
-            .container.container__reviews
-          section.contacts
-            .container.container__contacts
-              .form
-                .section-title Связаться со мной
-                form.form__elem
+          include ./templates/reviews.pug
+          
+          include ./templates/form-contact.pug
 
       include ./templates/footer.pug

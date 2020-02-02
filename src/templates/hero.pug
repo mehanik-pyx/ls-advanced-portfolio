@@ -3,13 +3,7 @@ section.hero
     header.header.hero__header
       .hero__logo
         a(href="https://mehanik-pyx.github.io/ls-advanced-portfolio/").logo АП
-      nav.nav
-        - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-        ul.nav__list
-          each item in menu
-            li.nav__item
-              a(href="#").nav__link #{item}
-              //- a(href="#" + item).nav__link #{item}
+      include nav.pug
       .hero__socials
         - var socials = ['instagram', 'vk', 'github']
         ul.socials

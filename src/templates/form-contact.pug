@@ -1,0 +1,25 @@
+section.form-contact
+  .container
+    .container__form-contact
+      h2.section-title Связаться со мной
+      form
+        .form__row
+          -
+            var fields = [
+              ['user', 'Введите ваше имя', 'Попов Александр'],
+              ['envelope', 'Введите ваш email', 'mehanik-pyx@mail.ru']
+            ]
+          each item in fields
+            label.form-block(data-title=item[1])
+              .form-block__container
+                +icon(item[0], 'form-block__icon')
+                .form-block__field
+                  input(type='text' placeholder=item[2]).form-block__input
+        .form__row.form__row--extra-margin
+          label.form-block(data-title='Сообщение к письму')
+            .form-block__container.form-block__container_align-top
+              +icon('message', 'form-block__icon')
+              .form-block__field
+                textarea.form-block__input(placeholder='Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса')
+        .form__row
+          input(type='submit' value='ОТПРАВИТЬ').gradient-btn.form__submit

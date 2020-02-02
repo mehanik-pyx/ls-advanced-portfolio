@@ -18,11 +18,10 @@ section.values
             ul.skills-row__list
               each skill in row[1]
                 li.skills-row__item
-                  .skill
-                    svg(viewBox="0 0 48 48" preserveAspectRatio="none").skill__shape
-                      circle(r="15.91549430918954" cx="24" cy="24").skill__circle.skill__circle--under
-                      circle(r="15.91549430918954" cx="24" cy="24" stroke="url(#gradient)" transform='rotate(180 24 24)').skill__circle.skill__circle--above
-                      linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                        stop(offset="0%" stop-color="#5500f2")
-                        stop(offset="100%" stop-color="#8f00ef")
-                    .skill__title #{skill}
+                  svg(viewBox="0 0 48 48" preserveAspectRatio="none").skill__shape
+                    circle(r="15.91549430918954" cx="24" cy="24").skill__circle.skill__circle--under
+                    circle(r="15.91549430918954" cx="24" cy="24" stroke="url(#gradient)" transform='rotate(180 24 24)').skill__circle.skill__circle--above
+                    linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                      stop(offset="0%" stop-color="#5500f2")
+                      stop(offset="100%" stop-color="#8f00ef")
+                  .skill__name #{skill}
