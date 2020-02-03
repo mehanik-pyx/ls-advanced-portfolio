@@ -5,12 +5,7 @@ section.hero
         a(href="https://mehanik-pyx.github.io/ls-advanced-portfolio/").logo АП
       include nav.pug
       .hero__socials
-        - var socials = ['instagram', 'vk', 'github']
-        ul.socials
-          each item in socials
-            li.socials__item
-              a(href="https://" + item + ".com/").socials__link
-                +icon(item, 'socials__icon')
+        +socials('')
 
     .hero__content
       .user-info

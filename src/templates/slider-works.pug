@@ -10,18 +10,17 @@ section.slider-works
               +icon('arrow', 'arrow arrow--next')
             button.slider-buttons__item.slider-buttons__item--slide--prev
               +icon('arrow', 'arrow arrow--prev')
-        .slider__previews
-          ul.previews
-            - for (var i = 2; i < 6; i++)
-              li.previews__item
-                +image("content/" + i + ".jpg" , "previews__pic")
+        ul.slider__previews
+          - for (var i = 2; i < 6; i++)
+            li.slider__previews-item
+              +image("content/" + i + ".jpg" , "previews__pic")
 
-      .slider__text-section
-        .slide__tags
-          ul.tags__list
+      .slider__info
+        .slider__tags
+          ul.slider__tags-list
             - var tags = ['HTML', 'CSS', 'Javascript']
             each tag in tags
-              li.tags__item #{tag}
+              li.slider__tags-item #{tag}
         .slide__text
           h3.slide__title Сайт школы образования
           .slide__desc-text

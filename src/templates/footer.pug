@@ -3,22 +3,16 @@ footer.footer
 		.footer__container
 			.footer__copyright
 				.footer__copyright-year © 2020
-			.footer__bio
-				.footer__bio-name Александр Попов
-				.footer__bio-desc Личный сайт <br> веб-разработчика
+			.footer__info
+				.footer__info-name Александр Попов
+				.footer__info-desc Личный сайт <br> веб-разработчика
 			.footer__data
 				.footer__nav
 					include nav.pug
 				.footer__content
 					.footer__desc
 						.footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-						.footer__socials
-							- var socials = ['instagram', 'vk', 'github']
-							ul.socials.socials--round-borders
-								each item in socials
-									li.socials__item
-										a(href="https://" + item + ".com/").socials__link
-											+icon(item, 'socials__icon')
+						+socials('socials--round-borders')
 					.footer__quote
 						.quote
 							.quote__text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
