@@ -1,17 +1,7 @@
 section.about#about
-  .container
-    .about__container
+  .container.about__container
       .about__info
-        .user
-          .avatar.user__avatar
-            +image("content/user.jpg", "avatar__pic")
-          .user__text
-            - var rows =[["Проживаю:", "Новосибирск"], ["Возраст:", "22 года"], ["Родился:", "8 августа"]];
-            table.user__table
-              each cell in rows
-                tr.user__table-row
-                  td.user__table-title #{cell[0]}
-                  td.user__table-content #{cell[1]}
+        include ./user.pug
 
       .about__description
         .about__suptitle Привет, меня зовут
