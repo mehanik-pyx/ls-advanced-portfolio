@@ -1,0 +1,14 @@
+- 
+  var layers = [
+    ['Sky', '0.1'],
+    ['Mountain', '0.25'],
+    ['Baloon', '0.35'],
+    ['Cloud', '0.38'],
+    ['Man', '0.45'],
+    ['Mountain1', '0.48'],
+    ['White', '0.50'],
+  ]
+section.parallax1
+  each layer in layers
+    .parallax1__layer(data-speed=layer[1])
+      +image('parallax1/' + layer[0] + '.png', 'parallax1__img')
