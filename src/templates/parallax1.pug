@@ -1,14 +1,18 @@
 - 
   var layers = [
     ['Sky', '0.1'],
-    ['Mountain', '0.25'],
-    ['Baloon', '0.35'],
-    ['Cloud', '0.38'],
-    ['Man', '0.45'],
-    ['Mountain1', '0.48'],
-    ['White', '0.50'],
+    ['Mountain', '0.13'],
+    ['Baloon', '0.17'],
+    ['Cloud', '0.2'],
+    ['Man', '0.23'],
+    ['Mountain1', '0.25'],
+    ['White', '0.28'],
   ]
 section.parallax1
   each layer in layers
     .parallax1__layer(data-speed=layer[1])
       +image('parallax1/' + layer[0] + '.png', 'parallax1__img')
+
+      
+//- include ./hero.pug
+//- include ./about.pug

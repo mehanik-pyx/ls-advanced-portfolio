@@ -1,12 +1,23 @@
 .welcome-section {
-  background: url(../images/content/welcome-bg-short.png);
+ /* background: url(../images/content/welcome-bg-short.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center center;*/
+  display: flex;
+  flex-direction: column;
   position: relative;
+	justify-content: flex-end;
+}
+
+.content {
+	position: relative;
+	z-index: 2;/*
+	flex-direction: column;
+	display: flex;*/
 }
 
 .middle-section {
+	margin-top: 145px;
 	padding-bottom: 173px;
 }
 

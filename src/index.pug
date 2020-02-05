@@ -11,10 +11,12 @@ html(lang="ru")
   body
     .wrapper
       .maincontent
-        include ./templates/parallax1.pug
         .welcome-section
-          include ./templates/hero.pug
-          include ./templates/about.pug
+          include ./templates/parallax1.pug
+          .content
+            include ./templates/hero.pug
+            include ./templates/about.pug
+          include ./templates/separator.pug
 
         .middle-section
           include ./templates/skills.pug
