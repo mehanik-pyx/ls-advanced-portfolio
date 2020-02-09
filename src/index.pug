@@ -11,20 +11,21 @@ html(lang="ru")
   body
     .wrapper
       .maincontent
-        .welcome-section
+        //- .welcome-section
           include ./templates/parallax1.pug
           .content
             include ./templates/hero.pug
             include ./templates/about.pug
           include ./templates/separator.pug
 
-        .middle-section
+        //- .middle-section
           include ./templates/skills.pug
                         
           include ./templates/slider-works.pug
-        .budda-section
-          include ./templates/reviews.pug
-          
-          include ./templates/form-contact.pug
+        //- .budda-section
+        include ./templates/parallax2.pug
+          //- .content
+            include ./templates/reviews.pug
+            include ./templates/form-contact.pug
 
-      include ./templates/footer.pug
+      //- include ./templates/footer.pug
