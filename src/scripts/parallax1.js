@@ -9,9 +9,6 @@ function moveLayersDependsOnScroll(wScroll) {
 
 		const divider = layer.dataset.speed;
 		const strafe = wScroll * divider / -10 + '%' ;
-
-		// layer.style.transform = `translateY(${strafe})`;
-
 		layer.style.transform = 'translate3d(0, ' + strafe + ', 0)';
 
 	});
