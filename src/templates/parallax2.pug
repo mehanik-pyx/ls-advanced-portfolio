@@ -2,14 +2,14 @@
   var layers = [
     //- ['1blue', '0'],
     ['White', '0'],
-    ['2bg-clouds', '0.01'],
-    ['3mountain', '0.15'],
-    ['4budda', '0.15'],
-    ['cloud-small', '0.2'],
-    ['5cloud', '0.08'],
-    ['cloud6', '0.05'],
+    ['2bg-clouds', '0.00'],
+    ['3mountain', '0.075'],
+    ['4budda', '0.075'],
+    ['cloud-small', '0.1'],
+    ['5cloud', '0.04'],
+    ['cloud6', '0.025'],
   ]
-section.parallax2
+section.parallax
   each layer in layers
     .parallax2__layer(data-speed=layer[1])
       +image('parallax2/' + layer[0] + '.png', 'parallax2__img')
@@ -27,3 +27,14 @@ section.parallax2
   each layer in layers
     .parallax2__layer(data-speed=layer[1])
       +image('parallax2/' + layer[0] + '.png', 'parallax2__img')
+//- - 
+  var layers = [
+    //- ['1blue', '0'],
+    ['White', '0'],
+    ['2bg-clouds', '0.01'],
+    ['3mountain', '0.15'],
+    ['4budda', '0.15'],
+    ['cloud-small', '0.2'],
+    ['5cloud', '0.08'],
+    ['cloud6', '0.05'],
+  ]
