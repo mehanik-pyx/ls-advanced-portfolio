@@ -10,11 +10,11 @@ function moveLayersDependsOnScroll(wScroll) {
 		if (coord.top < document.documentElement.clientHeight && coord.bottom > 0) {
 
 			const layers = parallax.children;
-			if (indx) {wScroll = wScroll - 2200};
+			if (indx) {wScroll = wScroll - 2100};
 			Array.from(layers).forEach(layer => {
 
 				const divider = layer.dataset.speed;
-				const strafe = wScroll * divider / -10 + '%';
+				const strafe = wScroll * divider / -20 + '%';
 				layer.style.transform = 'translate3d(0, ' + strafe + ', 0)';
 			});
 		}
