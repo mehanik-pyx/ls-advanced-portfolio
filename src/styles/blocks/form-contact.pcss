@@ -1,11 +1,31 @@
 .container__form-contact {
-	max-width: 851px;
+  width: 89%;
+  padding-right: 26%;
+  @include tablets {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+.form-contact__title {
+  @include phones {
+    text-align: center;
+  }
 }
 .form__row {
   margin-bottom: 38px;
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
   &--extra-margin {
     margin-bottom: 60px;
+
+      @include phones {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
   }
   &:last-child {
     margin-bottom: 0;
@@ -26,6 +46,11 @@
     font-weight: 600;
     color: rgba($text-color, .3);
     margin-left: 50px;
+  }
+
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 40px;
   }
 }
 .form-block__container {
@@ -68,4 +93,10 @@
   font-weight: bold;
   border-radius: 40px 5px;
   cursor: pointer;
+
+    @include phones {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
