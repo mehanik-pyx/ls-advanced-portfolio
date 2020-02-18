@@ -6,11 +6,17 @@ footer.footer
 					.footer__copyright-year © 2020
 				.footer__info
 					.footer__info-name Александр Попов
-					.footer__info-desc Личный сайт <br> веб-разработчика
+					.footer__info-desc Личный сайт веб-разработчика
 			.footer__data
 				.footer__nav
 					include nav.pug
-				.footer__content
+						//- nav.nav
+								- var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+								ul.nav__list
+									each item in menu
+										li.nav__item
+											a(href="#").nav__link #{item}
+				.footer__content 
 					.footer__desc
 						.footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
 						+socials('socials--round-borders')

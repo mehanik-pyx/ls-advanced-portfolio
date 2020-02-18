@@ -1,62 +1,117 @@
 .footer{
+	@include desktopHD {
+		color:white;
+	}//___________________________________________не забудь убрать потом!!!!!!!!!!!!!!
 	background-color: $footer-bg;
 	color: $footer-text;
 	line-height: 30px;
 	padding: 100px 0px;
+	@include desktop {
+		padding: 80px 0;
+	}
 	@include tablets {
 		padding: 50px 0;
 	}
+	
 }
 .footer__container {
 	display: flex;
+	justify-content: space-between;
+	@include phones {
+		flex-direction: column;
+	}
 }
 .footer__copyright-col {
+	margin-bottom: 50px;//    SPORNO
+	width: 25%;
 	display: flex;
 	justify-content: space-between;
 	@include desktop {
 		flex-direction: column;
+		justify-content: flex-start;
+		max-width: 159px;//goditsa
+	}/* 
+	@include tablets {
+		width: 23%;
+	} */
+	@include phones {
+		max-width: none;
+		width: 100%;
+		/* margin-bottom: 30px; */
 	}
 }
 .footer__copyright {
-	min-width: max-content;
-	margin-right: 60px;
+	margin-bottom: 27px;
+	/* min-width: max-content; */
+	/* margin-right: 60px; */
 }
 .footer__copyright-year{
-	min-width: max-content;
+	/* min-width: max-content; */
+	white-space: nowrap;
 	opacity: 0.1;
 	font-size: 48px;
 	line-height: 30px;
 	font-weight: 600;
 }
 .footer__info {
-	margin-right: 140px;
-	min-width: 143px;
+	width: 100%;
+	max-width: 143px;
+	@include phones{
+		max-width: none;
+	}
 }
 .footer__info-name {
-	margin-bottom: 34px;
+	margin-bottom: 30px;
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 700;
 	text-transform: uppercase;
+	@include phones {
+		margin-bottom: 16px;
+	}
 }
 .footer__info-desc {
 	opacity: 0.14;
 	font-size: 16px;
+}
+.footer__data {
+	width: 63%;
+	@include desktop {
+		width: 73.5%;
+	}
+	@include tablets {
+		width: 64%;
+	}
+	@include phones {
+		width: 100%;
+	}
 }
 .footer__nav {
 	margin-bottom: 53px;
 }
 .footer__content {
 	display: flex;
+	justify-content: space-between;
+	@include tablets {
+		flex-direction: column;
+		justify-content: space-between;
+	}
 }
 .footer__desc {
-	margin-right: 193px;
+	width: 33.4%;
+	/* margin-right: 193px; */
+	@include desktop {
+		/* margin-right: 55px; */
+	}
 }
 .footer__text {
 	margin-bottom: 27px;
-	min-width: 311px;
+	/* max-width: 311px;  931 100% */
 	opacity: 0.3;
 	font-size: 16px;
+}
+.footer__quote{
+	width: 45.86%;
 }
 .quote__text {
 	margin-bottom: 35px;
