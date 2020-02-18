@@ -1,17 +1,36 @@
-.nav {
+/* .nav {
   width: 46%;
   min-width: 689px;
+  @include desktop {
+    min-width: fit-content;
+  }
+  @include tablets {
+    display: none;
+  }
+  @include phones {
+    width: 80%;
+    min-width: auto;
+  }
+} */
+.nav__list {
+  display: flex;
+  justify-content: center;
+
+  width: 46%;
+  min-width: 689px;
+  @include desktop {
+  min-width: fit-content;
+  }
   @include tablets {
     display: none;
   }
 }
-.nav__list {
-  display: flex;
-  align-items: center;
-}
 
 .nav__item {
-  margin-right: 8.71%;
+  margin-right: 8%;
+  @include phones {
+    margin-right: 24%;
+  }
 
   &:last-child {
     margin: 0;

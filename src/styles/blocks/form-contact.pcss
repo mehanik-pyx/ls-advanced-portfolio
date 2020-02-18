@@ -7,7 +7,7 @@
   }
 }
 .form-contact__title {
-  @include phones {
+  @include tablets {
     text-align: center;
   }
 }
@@ -29,6 +29,9 @@
   }
   &:last-child {
     margin-bottom: 0;
+    @include tablets {
+      justify-content: center;
+    }
   }
 }
 .form-block {
@@ -75,6 +78,7 @@
   border: 0 none;
   width: 100%;
   &::placeholder {
+    /* height: fit-content; */
     color: currentColor;
     font-size: 18px;
     font-weight: bold;
