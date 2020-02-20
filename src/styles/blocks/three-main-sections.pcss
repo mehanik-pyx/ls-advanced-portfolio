@@ -1,8 +1,7 @@
 .welcome-section {
- /* background: url(../images/content/welcome-bg-short.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;*/
+  @include tablets {
+    background: url(../images/content/welcome-bg-short.png) center / cover no-repeat;
+  }
   position: relative;
   display: flex;
   flex-direction: column;
@@ -22,6 +21,9 @@
 }
 
 .budda-section {
+  @include tablets {
+    background: url(../images/content/Budda-bg.png) center / 156% 100% no-repeat;
+  }
   /*background: url('~images/content/Budda-bg.png') top right 53% / cover no-repeat;*/
   /*margin-top: 253px;*/
   padding-bottom: 134px;

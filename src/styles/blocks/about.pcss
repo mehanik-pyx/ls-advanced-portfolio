@@ -1,56 +1,78 @@
 .about {
-	margin-bottom: 220px;
+  margin: 164px 0 220px;
 }
 .about__container {
-	padding: 164px 24px 0 0;
-	display: flex;
-	justify-content: center;
+  padding: 0 17%;
+  display: flex;
+  justify-content: space-between;
+  @include desktop {
+  padding: 0 2%;
+  }
+  @include phones {
+    flex-direction: column;
+    /* padding-top: 114px; */
+    /* padding-bottom: 114px; */
+  }
 }
 .about__info {
-	width: 15.6%;
-	min-width: 281px;
-	margin-right: 150px;
+  width: 36%;
+  /* min-width: 281px; */
+  /* margin-right: 150px; */
+  @include tablets {
+    /* min-width: 214px; */
+    /* margin-right: 100px; */
+  }
+  @include phones {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 .about__description {
-	width: 29.3%;
-	min-width: 528px;
+  width: 56%;
+  /* min-width: 528px; */
+  @include tablets {
+    /* min-width: 369px; */
+  }
+  @include phones {
+    width: 100%;
+  }
 }
 .about__suptitle {
-	opacity: 0.5;
-	margin-bottom: 14px;
-	font-size: 16px;
-	line-height: 30px;
-	font-weight: 600;
+  opacity: 0.5;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 600;
 }
 .about__title {
-	margin-bottom: 28px;
-	font-size: 36px;
-	line-height: 48px;
-	font-weight: 700;
+  margin-bottom: 28px;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
 }
 .about__text {
-	opacity: 0.5;
-	margin-bottom: 92px;
-	font-size: 16px;
-	line-height: 30px;
-	font-weight: 600;
+  opacity: 0.5;
+  margin-bottom: 18%;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 600;
 }
 .about__subtext {
-	opacity: 0.5;
-	font-size: 16px;
-	line-height: 30px;
-	font-weight: 400;
-	font-style: italic;
-	position: relative;
-	&:before {
-		position: absolute;
-		top: 11px;
-		margin-right: 31px;
-		margin-left: -57px;
-		content:'*';
-		font-style: italic;
-		color: #db0200;
-		opacity: .1;
-		font-size: 48px;
-	}
+  opacity: 0.5;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  font-style: italic;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 11px;
+    margin-right: 31px;
+    margin-left: -57px;
+    content:'*';
+    font-style: italic;
+    color: #db0200;
+    opacity: .1;
+    font-size: 48px;
+  }
 }

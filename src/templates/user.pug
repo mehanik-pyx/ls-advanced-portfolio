@@ -1,6 +1,7 @@
 .user
-  .avatar.user__avatar
-    +image("content/user.jpg", "user__pic")
+  .user__avatar
+    .avatar
+      +image("content/user.jpg", "user__pic")
   .user__text
     - var rows =[["Проживаю:", "Новосибирск"], ["Возраст:", "22 года"], ["Родился:", "8 августа"]];
     table.user__table
