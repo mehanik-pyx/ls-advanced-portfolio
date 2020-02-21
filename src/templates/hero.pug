@@ -4,8 +4,11 @@ section.hero
       .hero__logo
         a.logo(href="https://mehanik-pyx.github.io/ls-advanced-portfolio/") АП
       include nav.pug
-      .hero__socials
-        +socials('')
+      .hero__socials-burger
+        .hero__socials
+          +socials('')
+        .hero__burger
+          button.btn.burger
 
     .hero__content
       .user-info

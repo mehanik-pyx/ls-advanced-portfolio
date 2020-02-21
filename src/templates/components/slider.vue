@@ -5,11 +5,8 @@
       <div class="buttons">
         <button v-if="nav" class="v_slider__prev" v-html="prevNav" @click="prevSlide"></button>
         <button v-if="nav" class="v_slider__next" v-html="nextNav" @click="nextSlide"></button>
+      </div>
     </div>
-    </div>
-    
-    
-
     <div class="v_slider__list" ref="list">
       <div class="v_slider__track" ref="track" :style="{width: width.track + 'px', transform: 'translate(-' + transform + 'px)', transition: 'transform ' + settings.timing + ' ' + settings.speed + 'ms'}">
         <slot></slot>
@@ -519,9 +516,16 @@
   .v_slider__dots li.active span { background: #ff3f4d; }
   
   .v_slider__prev,
-  .v_slider__next { outline: none; background:transparent; padding: 15px 19px; margin-left: 27px; border:1px solid #ff3f4d; border-radius: 50%; color:#ff3f4d;  opacity: 0.9; }
+  .v_slider__next { 
+    outline: none; 
+    background:transparent; 
+    padding: 15px 19px; 
+    margin-left: 27px; 
+    border: 1px solid #414c63; 
+    border-radius: 50%; 
+    color:#414c63; }
   /*.v_slider__prev { margin-left: 12%; @include phones {margin-left: 30px;}}*/
   .v_slider__prev:hover,
-  .v_slider__next:hover { border-color: #04a0c5; color:#04a0c5; cursor: pointer; }
+  .v_slider__next:hover { opacity: 0.7; cursor: pointer; }
 
 </style>

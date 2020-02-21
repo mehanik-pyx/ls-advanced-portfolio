@@ -5,9 +5,10 @@ if (process.env.NODE_ENV === "development") {
 
 import "./scripts/skills";
 import "./scripts/parallax";
+import "./scripts/popup-menu";
 
-import Vue from 'vue'
-import sliderReviews from './templates/components/main.vue'
+import Vue from 'vue';
+import sliderReviews from './templates/components/main.vue';
 
 new Vue({
   el: '#slider-reviews',

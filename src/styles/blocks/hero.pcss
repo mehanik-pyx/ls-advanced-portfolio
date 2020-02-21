@@ -19,9 +19,51 @@
   line-height: 30px;
   font-weight: 800;
 }
+.hero__header {
+  .nav {
+    @include tablets {
+      display: none;
+    }
+  }
+}
+.hero__socials-burger {
+  display: flex;
+  justify-content: space-between;
+}
 .hero__socials {
+  @include tablets {
+    margin-right: 93px;
+  }
   @include phones {
     display: none;
+  }
+}
+.hero__burger {
+  display: none;
+  @include tablets {
+    display: flex;
+  }
+}
+.burger {
+  z-index: 4;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 24px;
+  height: 20px;
+  fill: $links-color;
+  background-color: transparent;
+  background-image: svg-load('burger.svg', width=100%, height=100%);
+  background-position: center center;
+  background-repeat: no-repeat;
+   /* fill=$links-color, */
+}
+
+.overlay {
+  .burger {
+    margin-right: 8px;
+    background-image: svg-load('cross.svg', width=100%, height=100%);
+     /* fill=#414c63, */
   }
 }
 .hero__content {

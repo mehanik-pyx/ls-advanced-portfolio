@@ -1,6 +1,14 @@
+-
+  var menu = [
+    ['Главная', ''],
+    ['Обо мне', 'about'],
+    ['Навыки', 'skills'],
+    ['Работы', 'slider-works'],
+    ['Отзывы', 'reviews'],
+    ['Связаться', 'form-contact']
+  ]
 nav.nav
-  - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
   ul.nav__list
     each item in menu
       li.nav__item
-        a(href="#").nav__link #{item}
+        a(href="#" +item[1]).nav__link #{item[0]}

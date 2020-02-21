@@ -24,7 +24,7 @@
 
 <script>
   console.log('this is main.vue module');
-  import slider from './slider.vue'
+  import slider from './slider.vue';
   export default {
     name: 'sliderReviews',
     data () {
@@ -43,7 +43,7 @@
           responsive : {
             0: {
               items: 1
-            },
+            },  // 1 слайд на w до 768(а не 480), иначе отображается оче криво.
             768: { 
               items: 2
             }
@@ -90,19 +90,19 @@
     @include tablets {
       min-height: unset;
     }*/
-    background: #00800b;
+    /*background: #00800b;*/
     text-align: start;
     /*padding: 100px 0;*/
-    color: #fff;
+    /*color: #fff;*/
     font-size: 26px;
     font-style: italic;
     font-weight: 300;
   }
   .item.active {
-    background: #ff3f4d;
+    /*background: #ff3f4d;*/
   }
   .item.super {
-    background: #04a0c5;
+    /*background: #04a0c5;*/
   }
   pre {
     border:1px solid #eee;
