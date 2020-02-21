@@ -2,20 +2,23 @@ section.reviews
   .container
     .container__reviews
       .reviews__top-wrapper
-        h2.section-title.section-title_no-margin Что обо мне говорят
-        .reviews__arrows
+        //- h2.section-title.section-title_no-margin Что обо мне говорят
+        //- .reviews__arrows
           button.reviews__arrow
             +icon('arrow', 'reviews__arrow_left')
           button.reviews__arrow
             +icon('arrow', 'reviews__arrow_right')
       .reviews__slider.reviews-slider
         .reviews-slider__track
-          -
+          #slider-reviews
+          //- -
             var reviews = [
               ['1', 'Ковальчук Дмитрий', 'Основатель Loftschool', 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!'],
               ['2', 'Владимир Сабанцев', 'Преподаватель', 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах.'],
+              ['1', 'третий Дмитрий', 'Основатель Loftschool', 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!'],
+              ['2', 'четвертый Сабанцев', 'Преподаватель', 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах.'],
             ]
-          each author in reviews
+          //- each author in reviews
             .reviews-slider__item.reviews-item
               .reviews-item__text #{author[3]}
               .reviews-item__author
