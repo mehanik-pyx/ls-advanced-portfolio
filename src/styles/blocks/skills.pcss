@@ -1,10 +1,57 @@
-.skills{}
+.skills {
+  .container {
+    position: relative;
+    @include tablets {
+      padding-bottom: 350px;
+    }
+    &:before {
+    content: "";
+    position: absolute;
+    background: url('~images/content/backpack.png') left bottom / contain no-repeat;
+    display: block;
+    bottom: 5%;
+    height: 79%;
+    width: 69%;
+    left: -20%;
+    z-index: -10;
+    opacity: .9;
+    @include desktop {
+      left: -322px;
+    }
+    @include tablets {
+      bottom: 0;
+      left: 50%;
+      height: 300px;
+      transform: translateX(-50%);
+      background-position: center center;
+    }
+
+    @include phones {
+      width: 100%;
+    }
+    /* width: 712px; */
+    /* height: 627px; */
+    /* z-index: -1000; */
+    /* top: 77px; */
+    /* right: 559px; */
+  }
+  }
+}
 .skills-title__container {
 	display: flex;
   justify-content: center;
+  @include tablets {
+    text-align: center;
+  }
+  @include phones {
+    text-align: start;
+  }
 }
 .skills__title {
 	padding-left: 110px;
+  @include tablets {
+    padding: 0;
+  }
 }
 .skills__title-text{
 	font-size: 30px;
@@ -12,17 +59,6 @@
 	line-height: 36px;
 	margin-bottom: 51px;
 	position: relative;
-	&:before {
-  	content: "";
-    position: absolute;
-    background: url('~images/content/backpack.png') left bottom / contain no-repeat;
-    display: block;
-    width: 712px;
-		height: 627px;
-		z-index: -1000;
-		top: 77px;
-		right: 559px;
-  }
 }
 .skills__desc{
 	line-height: 30px;
@@ -33,15 +69,37 @@
 .skills__container {
 	justify-content: flex-end;
 	display: flex;
+  @include tablets {
+    justify-content: center;
+  }
 }
 .skills-chart {
 	padding-top: 79px;
-	padding-right: 69px;
+	padding-right: 4%;
+  @include tablets {
+    padding: 50px 0 0;
+  }
+}
+.skills__list {
+  @include phones {
+    text-align: center;
+  }
 }
 .skills-row__title {
 	font-size: 24px;
 	line-height: 48px;
 	font-weight: 700;
+  @include tablets {
+    text-align: center;
+  }
+}
+.skills-row__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -2.5%;
+  @include phones {
+    justify-content: center;
+  }
 }
 .skills-row__item {
 	display: inline-block;
@@ -51,15 +109,24 @@
   width: 200px;
   height: 200px;
   fill: transparent;
+  @include desktop {
+    width: 180px;
+    height: 180px;
+  }
+  @include tablets {
+    width: 150px;
+    height: 150px;
+  }
 }
 .skill__circle {
-	&--under {
+	&_under {
 			stroke: #eaeaea;
 		  stroke-width: 2.6px;
 		}
-	&--above {
+	&_above {
 		stroke-width: 5px;
 		stroke-dasharray: 38 100;
+
 	}
 }
 .skill__name {
@@ -67,7 +134,7 @@
 	position: absolute;
 	top: 50%;
   left: 50%;
-	opacity: 0.5;
+	opacity: 0.7;
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 700;
