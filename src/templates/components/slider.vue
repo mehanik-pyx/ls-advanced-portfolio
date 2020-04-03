@@ -325,7 +325,8 @@
       // Перемещение слайдера
       setSlide (n, transition = true) {
         // Удаляем активный слайд
-        for (let i = 0; i < this.numItemAll - 1; ++i) {
+        // for (let i = 0; i < this.numItemAll - 1; i++) {//////////////////////////////////////////////////////////
+        for (let i = 0; i < this.numItemAll; i++) {
           this.el.slides[i].classList.remove('active', 'super')
         }
 
