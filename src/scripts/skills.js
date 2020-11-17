@@ -37,7 +37,7 @@ const skillsRow = {
     skill
   },
   props: {
-    skill: Object
+    skillsRow: Object
   }
 };
 
@@ -49,11 +49,11 @@ new Vue({
   },
   data() {
     return {
-      skills: {}
+      allSkills: {}
     };
   },
   created() {
     const data = require("../data/skills.json");
-    this.skills = data;
+    this.allSkills = data;
   }
 });
